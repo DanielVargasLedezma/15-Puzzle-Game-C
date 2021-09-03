@@ -4,6 +4,13 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>Headers_Files/Archivos.h</itemPath>
+      <itemPath>Headers_Files/DateGenerator.h</itemPath>
+      <itemPath>Headers_Files/Interfaz.h</itemPath>
+      <itemPath>Headers_Files/Jugador.h</itemPath>
+      <itemPath>Headers_Files/Lista_Registros.h</itemPath>
+      <itemPath>Headers_Files/Registro.h</itemPath>
+      <itemPath>Headers_Files/Table.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -12,6 +19,13 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>C_Files/Archivos.c</itemPath>
+      <itemPath>C_Files/DateGenerator.c</itemPath>
+      <itemPath>C_Files/Interfaz.c</itemPath>
+      <itemPath>C_Files/Jugador.c</itemPath>
+      <itemPath>C_Files/Lista_Registros.c</itemPath>
+      <itemPath>C_Files/Registro.c</itemPath>
+      <itemPath>C_Files/Table.c</itemPath>
       <itemPath>C_Files/main.c</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -36,7 +50,35 @@
       </toolsSet>
       <compileType>
       </compileType>
+      <item path="C_Files/Archivos.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="C_Files/DateGenerator.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="C_Files/Interfaz.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="C_Files/Jugador.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="C_Files/Lista_Registros.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="C_Files/Registro.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="C_Files/Table.c" ex="false" tool="0" flavor2="0">
+      </item>
       <item path="C_Files/main.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Headers_Files/Archivos.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Headers_Files/DateGenerator.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Headers_Files/Interfaz.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Headers_Files/Jugador.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Headers_Files/Lista_Registros.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Headers_Files/Registro.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Headers_Files/Table.h" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
     <conf name="Release" type="1">
@@ -59,7 +101,35 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="C_Files/Archivos.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="C_Files/DateGenerator.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="C_Files/Interfaz.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="C_Files/Jugador.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="C_Files/Lista_Registros.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="C_Files/Registro.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="C_Files/Table.c" ex="false" tool="0" flavor2="0">
+      </item>
       <item path="C_Files/main.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Headers_Files/Archivos.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Headers_Files/DateGenerator.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Headers_Files/Interfaz.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Headers_Files/Jugador.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Headers_Files/Lista_Registros.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Headers_Files/Registro.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Headers_Files/Table.h" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
   </confs>

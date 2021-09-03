@@ -13,11 +13,15 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include "../Headers_Files/Interfaz.h"
 
 /*
  * 
  */
+
 int main(int argc, char** argv) {
+
+    empezarJuego();
 
     return (EXIT_SUCCESS);
 }

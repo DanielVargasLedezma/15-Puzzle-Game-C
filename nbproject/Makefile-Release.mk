@@ -35,6 +35,13 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/C_Files/Archivos.o \
+	${OBJECTDIR}/C_Files/DateGenerator.o \
+	${OBJECTDIR}/C_Files/Interfaz.o \
+	${OBJECTDIR}/C_Files/Jugador.o \
+	${OBJECTDIR}/C_Files/Lista_Registros.o \
+	${OBJECTDIR}/C_Files/Registro.o \
+	${OBJECTDIR}/C_Files/Table.o \
 	${OBJECTDIR}/C_Files/main.o
 
 
@@ -61,6 +68,41 @@ LDLIBSOPTIONS=
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/quiz_1.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.c} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/quiz_1 ${OBJECTFILES} ${LDLIBSOPTIONS}
+
+${OBJECTDIR}/C_Files/Archivos.o: C_Files/Archivos.c
+	${MKDIR} -p ${OBJECTDIR}/C_Files
+	${RM} "$@.d"
+	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/C_Files/Archivos.o C_Files/Archivos.c
+
+${OBJECTDIR}/C_Files/DateGenerator.o: C_Files/DateGenerator.c
+	${MKDIR} -p ${OBJECTDIR}/C_Files
+	${RM} "$@.d"
+	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/C_Files/DateGenerator.o C_Files/DateGenerator.c
+
+${OBJECTDIR}/C_Files/Interfaz.o: C_Files/Interfaz.c
+	${MKDIR} -p ${OBJECTDIR}/C_Files
+	${RM} "$@.d"
+	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/C_Files/Interfaz.o C_Files/Interfaz.c
+
+${OBJECTDIR}/C_Files/Jugador.o: C_Files/Jugador.c
+	${MKDIR} -p ${OBJECTDIR}/C_Files
+	${RM} "$@.d"
+	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/C_Files/Jugador.o C_Files/Jugador.c
+
+${OBJECTDIR}/C_Files/Lista_Registros.o: C_Files/Lista_Registros.c
+	${MKDIR} -p ${OBJECTDIR}/C_Files
+	${RM} "$@.d"
+	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/C_Files/Lista_Registros.o C_Files/Lista_Registros.c
+
+${OBJECTDIR}/C_Files/Registro.o: C_Files/Registro.c
+	${MKDIR} -p ${OBJECTDIR}/C_Files
+	${RM} "$@.d"
+	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/C_Files/Registro.o C_Files/Registro.c
+
+${OBJECTDIR}/C_Files/Table.o: C_Files/Table.c
+	${MKDIR} -p ${OBJECTDIR}/C_Files
+	${RM} "$@.d"
+	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/C_Files/Table.o C_Files/Table.c
 
 ${OBJECTDIR}/C_Files/main.o: C_Files/main.c
 	${MKDIR} -p ${OBJECTDIR}/C_Files
