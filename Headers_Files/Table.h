@@ -30,6 +30,9 @@ extern void randomizarNumeros();
 //Retorna 1 si esta repetido, 0 si no
 extern int checkRepetidos(int numRand);
 
+extern int chechIfValidMove();
+extern int checkIfWon();
+
 extern void liberarMemoriaTablero();
 
 #endif /* TABLE_H */

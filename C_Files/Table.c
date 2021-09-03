@@ -91,6 +91,14 @@ int checkRepetidos(int numRand) {
     return 0;
 }
 
+int chechIfValidMove() {
+    return 0;
+}
+
+int checkIfWon() {
+    return 0;
+}
+
 void liberarMemoriaTablero() {
     for (int i = 0; i < table->row_count; i++) {
         free(table->tablero[i]);

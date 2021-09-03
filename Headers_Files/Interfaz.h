@@ -13,9 +13,15 @@
 
 #ifndef INTERFAZ_H
 #define INTERFAZ_H
+#include <stdio.h>
+#include <string.h>
+#include "Lista_Registros.h"
 #include "Table.h"
+#include "Jugador.h"
+#include "DateGenerator.h"
 
 extern void empezarJuego();
+extern void imprimirTablero();
 extern void vistaMenu();
 
 #endif /* INTERFAZ_H */
