@@ -37,7 +37,8 @@ void inicializarTablero(int n, int m) {
 
 void randomizarNumeros() {
     srand(time(NULL));
-    int numRand = 0, bandera = 0, i = 0, j = 0;
+    int numRand = 0, contador = 0;
+//    int bandera = 0, i = 0, j = 0;
 
     //    while (bandera == 0) {
     //        numRand = rand() % 15 + 1;
@@ -57,14 +58,20 @@ void randomizarNumeros() {
     //            }
     //        }
     //    }
-    int contador=0;
+
     for (int i = 0; i < table->row_count; i++) {
         for (int j = 0; j < table->col_count; j++) {
             numRand = rand() % 15 + 1;
-            while (checkRepetidos(numRand) == &&contador!=15) {
+            
+            while (checkRepetidos(numRand) == 0) {
                 numRand = rand() % 15 + 1;
                 contador++;
             }
+            
+            if(contador == 15){
+                break;
+            }
+            
             table->tablero[i][j] = numRand;
         }
     }
