@@ -57,12 +57,13 @@ void randomizarNumeros() {
     //            }
     //        }
     //    }
-
+    int contador=0;
     for (int i = 0; i < table->row_count; i++) {
         for (int j = 0; j < table->col_count; j++) {
             numRand = rand() % 15 + 1;
-            while (checkRepetidos(numRand) == 0) {
+            while (checkRepetidos(numRand) == &&contador!=15) {
                 numRand = rand() % 15 + 1;
+                contador++;
             }
             table->tablero[i][j] = numRand;
         }
