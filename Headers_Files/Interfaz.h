@@ -15,7 +15,8 @@
 #define INTERFAZ_H
 #include <stdio.h>
 #include <string.h>
-#include <ctype.h>  
+#include <ctype.h>
+#include <unistd.h>  
 #include "Lista_Registros.h"
 #include "Table.h"
 #include "Jugador.h"
@@ -34,7 +35,7 @@ extern void vistaMenu();
 Retorna 1 si gano el juego;
 Retorna -1 si se retiro del juego
 */
-extern int menuJuego(int* numeroMovimientos);
+extern int menuJuego(int* numeroMovimientos, char nombrejugador[10]);
 
 extern Move pedirMovimiento();
 
