@@ -1,4 +1,13 @@
-El jugador necesito 0 movimientos
-El nombre del jugador es Daniel
+
+El jugador necesito 1 movimientos
+El nombre del jugador es joshua
 Se jugo el dia 7 del mes 9 del 2021
-El jugador PERDIO
+El jugador GANO
+El jugador necesito 3 movimientos
+El nombre del jugador es jovs
+Se jugo el dia 7 del mes 9 del 2021
+El jugador GANO
+El jugador necesito 1 movimientos
+El nombre del jugador es Joshua
+Se jugo el dia 7 del mes 9 del 2021
+El jugador GANO

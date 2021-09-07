@@ -203,7 +203,7 @@ int checkIfWon()
             if (table.tablero[i][j] == contador)
             {
                 contador++;
-                if (contador == 15)
+                if (contador == 15 && table.tablero[3][3]==0)
                 {
                     return 1;
                 }

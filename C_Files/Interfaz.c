@@ -51,7 +51,6 @@ void imprimirTablero()
         }
         printf("\n");
     }
-    printf("\n");
 }
 
 Jugador definirJugador(char nombreJugador[10])
@@ -96,10 +95,20 @@ void vistaMenu()
 
     Registro *nuevoRegistro = crearRegistro(&nuevo);
 
-    if (menuJuego(&numeroMovimientos) == 1)
+    if (menuJuego(&numeroMovimientos, nombreJugador) == 1)
     {
         char ganar[10] = {'G','A','N','O','\0'};
-        printf("Usted gano el juego");
+        printf("Felicidades %s !! \nUsted gano el juego\nMovimientos realizados: %d \n", nombreJugador,numeroMovimientos);
+        
+        printf("Saliendo en 3 ");
+        fflush(stdout);
+        sleep(2);
+        printf("2 ");
+        fflush(stdout); // Force the output to be printed
+        sleep(2);
+        printf("1 ");
+        fflush(stdout); // Force the output to be printed
+        sleep(2);
         memcpy(nuevoRegistro->resultado, ganar, sizeof ganar);
 
     }
@@ -107,6 +116,14 @@ void vistaMenu()
     {
         char perder[10] = {'P','E','R','D', 'I','O','\0'};
         printf("Usted decidio retirarse, que pena...");
+        printf("Saliendo en 3 ");
+        fflush(stdout);
+        sleep(1);
+        printf("2 ");
+        fflush(stdout); // Force the output to be printed
+        sleep(1);
+        printf("1 ");
+        fflush(stdout); // Force the output to be printed
         memcpy(nuevoRegistro->resultado, perder, sizeof perder);
     }
 
@@ -119,17 +136,18 @@ void vistaMenu()
 Retorna 1 si gano el juego;
 Retorna -1 si se retiro del juego
 */
-int menuJuego(int *numeroMovimientos)
+int menuJuego(int *numeroMovimientos, char nombrejugador[10])
 {
     int response = 0;
     Move move;
 
-    // probarGanexd();
+    probarGanexd();
     imprimirTablero();
 
     do
     {
         printf("\e[1;1H\e[2J");
+        printf("Jugador: %s | Movimientos: %d \n",nombrejugador,*numeroMovimientos);
         imprimirTablero();
 
         move = pedirMovimiento();
@@ -147,9 +165,11 @@ int menuJuego(int *numeroMovimientos)
             break;
         case -1:
             printf("El movimiento que intenta realizar es invalido.\n");
+            sleep(1);
             break;
         case 0:
             printf("El movimiento que intenta realizar no esta definido.\n");
+            sleep(1);
             break;
         case -100:
             return -1;
