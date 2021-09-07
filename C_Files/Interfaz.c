@@ -43,11 +43,11 @@ void imprimirTablero()
         {
             if (table->tablero[i][j] != 0)
             {
-                printf("[%d]", table->tablero[i][j]);
+                printf(j != table->col_count - 1 ? " [%2d] " : " [%2d] \n", table->tablero[i][j]);
             }
             else
             {
-                printf("[ ]");
+                printf(" [  ]");
             }
         }
         printf("\n");
@@ -99,9 +99,11 @@ void vistaMenu()
 
     if (menuJuego(&numeroMovimientos) == 1)
     {
+        printf("Usted gano el juego");
     }
     else
     {
+        printf("Usted decidio retirarse, que pena...");
     }
 
     //Cuando se finaliza el juego o cuando el jugador se retira
@@ -117,30 +119,33 @@ int menuJuego(int *numeroMovimientos)
 {
     int response = 0;
     Move move;
-    char opcion = 'p';
+
+    probarGanexd();
+    imprimirTablero();
 
     do
     {
+        printf("\e[1;1H\e[2J");
         imprimirTablero();
+
         move = pedirMovimiento();
-        response = checkIfValidMove(move); 
+        response = checkIfValidMove(move);
 
         switch (response)
         {
         case 1:
-            /* 
             doTheMove(move);
+            (*numeroMovimientos)++;
             if (checkIfWon() == 1)
             {
                 return 1;
             }
-             */
             break;
         case -1:
-            printf("El movimiento que intenta realizar es invalido.");
+            printf("El movimiento que intenta realizar es invalido.\n");
             break;
         case 0:
-            printf("El movimiento que intenta realizar no esta definido.");
+            printf("El movimiento que intenta realizar no esta definido.\n");
             break;
         case -100:
             return -1;
@@ -154,12 +159,12 @@ Move pedirMovimiento()
 {
     char move;
 
-    printf("%s", "Movimientos: ");
-    printf("%s", "1: Arriba     |    2: Abajo");
-    printf("%s", "3: Izquierda  |    4: Derecha");
-    printf("%s", "          5: Salir           ");
+    printf("%s", "Movimientos: \n");
+    printf("%s", "1: Arriba     |    2: Abajo\n");
+    printf("%s", "3: Izquierda  |    4: Derecha\n");
+    printf("%s", "          5: Salir           \n");
     printf("%s", "Ingrese un movimiento -> ");
-    move = getchar();
+    scanf(" %c", &move);
 
     switch (move)
     {

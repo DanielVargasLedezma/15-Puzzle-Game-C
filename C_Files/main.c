@@ -20,8 +20,7 @@
  */
 
 int main(int argc, char** argv) {
-
     empezarJuego();
-    
     return (EXIT_SUCCESS);
 }
+

@@ -13,52 +13,69 @@
 
 #include "../Headers_Files/Lista_Registros.h"
 
-ListaRegistro* lista;
+ListaRegistro *lista;
 
-void initList() {
-    if (!lista) {
-        lista = (ListaRegistro*) malloc(sizeof (ListaRegistro));
+void initList()
+{
+    if (!lista)
+    {
+        lista = (ListaRegistro *)malloc(sizeof(ListaRegistro));
+        lista->cantidadNodos = 0;
     }
 }
 
-void push(Registro* data) {
-    if (!data) {
+void push(Registro *data)
+{
+    if (!data)
+    {
         return;
     }
 
-    Nodo* nuevo = (Nodo*) malloc(sizeof (Nodo));
+    Nodo *nuevo = (Nodo *)malloc(sizeof(Nodo));
     nuevo->data = data;
     nuevo->sig = NULL;
 
-    if (!lista->head) {
+    if (!lista->head)
+    {
         lista->head = nuevo;
-    } else {
-        Nodo* tmp = lista->head;
+    }
+    else
+    {
+        Nodo *tmp = lista->head;
 
-        while (tmp->sig) {
+        while (tmp->sig)
+        {
             tmp = tmp->sig;
         }
 
         tmp->sig = nuevo;
     }
+    lista->cantidadNodos++;
 }
 
-void freeList() {
-    if (!lista->head) {
+void freeList()
+{
+    if (!lista || !(lista->head))
+    {
         return;
     }
 
-    Nodo* tmp = lista->head;
+    if (lista->cantidadNodos == 0)
+    {
+        Nodo *tmp = lista->head;
 
-    while (tmp) {
-        if (tmp->data) {
-            free(tmp->data);
+        while (tmp)
+        {
+            if (tmp->data)
+            {
+                free(tmp->data);
+            }
+
+            lista->head = lista->head->sig;
+            free(tmp);
+            tmp = lista->head;
         }
 
-        lista->head = lista->head->sig;
-        free(tmp);
-        tmp = lista->head;
+        free(lista);
     }
-
-    free(lista);
 }

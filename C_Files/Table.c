@@ -37,6 +37,7 @@ void inicializarTablero(int n, int m)
             table->tablero[i][j] = 0;
         }
     }
+    randomizarNumeros();
 }
 
 void randomizarNumeros()
@@ -48,20 +49,23 @@ void randomizarNumeros()
     {
         for (int j = 0; j < table->col_count; j++)
         {
-            numRand = rand() % 15 + 1;
+            numRand = 1 + rand() % 15 ;
 
             while (checkRepetidos(numRand) == 0)
             {
-                numRand = rand() % 15 + 1;
-                contador++;
-            }
+                numRand = 1 + rand() % 15 ;
 
+            }
+           
+            table->tablero[i][j] = numRand;
+            contador++;
+            
             if (contador == 15)
             {
                 break;
             }
 
-            table->tablero[i][j] = numRand;
+            
         }
     }
 }
@@ -115,12 +119,12 @@ int checkRepetidos(int numRand)
         {
             if (table->tablero[i][j] == numRand)
             {
-                return 1;
+                return 0;
             }
         }
     }
 
-    return 0;
+    return 1;
 }
 
 /*
@@ -170,7 +174,7 @@ int checkIfValidMove(Move move)
         break;
     case MOVE_RIGHT:
         j++;
-        if (j >= table->col_count)
+        if ( j>= table->col_count)
         {
             return -1;
         }
@@ -195,12 +199,72 @@ Retorna -1 si el tablero no esta ordenado.
 */
 int checkIfWon()
 {
-    return -1;
+    int contador=1;
+    for (int i = 0; i < table->row_count; i++)
+    {
+        for (int j = 0; j < table->col_count; j++)
+        {
+            if(table->tablero[i][j]==contador){
+                contador++;
+                if(contador==15){
+                    return 1;
+                }
+            }
+            
+        }
+        
+    }
+ 
+        return -1;   
+
+    
 }
 
 void doTheMove(Move move)
 {
+    switch (move)
+    {
     
+    case MOVE_UP:{
+         int i = retornarIDeVacio(), j = retornarJDeVacio();
+         int tmp=0;
+         tmp=table->tablero[i-1][j];
+         table->tablero[i-1][j]=table->tablero[i][j];
+         table->tablero[i][j]=tmp;
+        break;
+    }
+    case MOVE_DOWN:{
+         int i = retornarIDeVacio(), j = retornarJDeVacio();
+         int tmp=0;
+         tmp=table->tablero[i+1][j];
+         table->tablero[i+1][j]=table->tablero[i][j];
+         table->tablero[i][j]=tmp;
+        break;
+    }
+    case MOVE_LEFT:{
+         int i = retornarIDeVacio(), j = retornarJDeVacio();
+         int tmp=0;
+         tmp=table->tablero[i][j-1];
+         table->tablero[i][j-1]=table->tablero[i][j];
+         table->tablero[i][j]=tmp;
+    }
+        break;
+        
+    case MOVE_RIGHT:{
+         int i = retornarIDeVacio(), j = retornarJDeVacio();
+         int tmp=0;
+         tmp=table->tablero[i][j+1];
+         table->tablero[i][j+1]=table->tablero[i][j];
+         table->tablero[i][j]=tmp;
+        break;
+    }
+    case END_GAME:
+    
+    break;    
+    default:
+
+        break;
+    }
 }
 
 void liberarMemoriaTablero()
@@ -213,4 +277,23 @@ void liberarMemoriaTablero()
     free(table->tablero);
 
     free(table);
+}
+
+void probarGanexd(){
+    table->tablero[0][0]=1;
+    table->tablero[0][1]=2;
+    table->tablero[0][2]=3;
+    table->tablero[0][3]=4;
+    table->tablero[1][0]=5;
+    table->tablero[1][1]=6;
+    table->tablero[1][2]=7;   
+    table->tablero[1][3]=8;  
+    table->tablero[2][0]=9;       
+    table->tablero[2][1]=10;
+    table->tablero[2][2]=11;
+    table->tablero[2][3]=12;
+    table->tablero[3][0]=13;
+    table->tablero[3][1]=14; 
+    table->tablero[3][2]=0;
+    table->tablero[3][3]=15;
 }

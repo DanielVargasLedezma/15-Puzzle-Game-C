@@ -16,16 +16,17 @@
 #include <stdlib.h>
 #include "Nodo.h"
 
-typedef struct ListaRegistro {
-    Nodo* head;
-
+typedef struct ListaRegistro
+{
+    Nodo *head;
+    int cantidadNodos;
 } ListaRegistro;
 
-extern ListaRegistro* lista;
+extern ListaRegistro *lista;
 
 extern void initList();
 
-extern void push(Registro* data);
+extern void push(Registro *data);
 
 extern void freeList();
 
