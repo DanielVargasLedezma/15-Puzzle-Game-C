@@ -9,6 +9,7 @@
       <itemPath>Headers_Files/Interfaz.h</itemPath>
       <itemPath>Headers_Files/Jugador.h</itemPath>
       <itemPath>Headers_Files/Lista_Registros.h</itemPath>
+      <itemPath>Headers_Files/Nodo.h</itemPath>
       <itemPath>Headers_Files/Registro.h</itemPath>
       <itemPath>Headers_Files/Table.h</itemPath>
     </logicalFolder>
@@ -24,6 +25,7 @@
       <itemPath>C_Files/Interfaz.c</itemPath>
       <itemPath>C_Files/Jugador.c</itemPath>
       <itemPath>C_Files/Lista_Registros.c</itemPath>
+      <itemPath>C_Files/Nodo.c</itemPath>
       <itemPath>C_Files/Registro.c</itemPath>
       <itemPath>C_Files/Table.c</itemPath>
       <itemPath>C_Files/main.c</itemPath>
@@ -60,6 +62,8 @@
       </item>
       <item path="C_Files/Lista_Registros.c" ex="false" tool="0" flavor2="0">
       </item>
+      <item path="C_Files/Nodo.c" ex="false" tool="0" flavor2="0">
+      </item>
       <item path="C_Files/Registro.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="C_Files/Table.c" ex="false" tool="0" flavor2="0">
@@ -75,6 +79,8 @@
       <item path="Headers_Files/Jugador.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Headers_Files/Lista_Registros.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Headers_Files/Nodo.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Headers_Files/Registro.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -111,6 +117,8 @@
       </item>
       <item path="C_Files/Lista_Registros.c" ex="false" tool="0" flavor2="0">
       </item>
+      <item path="C_Files/Nodo.c" ex="false" tool="0" flavor2="0">
+      </item>
       <item path="C_Files/Registro.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="C_Files/Table.c" ex="false" tool="0" flavor2="0">
@@ -126,6 +134,8 @@
       <item path="Headers_Files/Jugador.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Headers_Files/Lista_Registros.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Headers_Files/Nodo.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Headers_Files/Registro.h" ex="false" tool="3" flavor2="0">
       </item>

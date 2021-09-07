@@ -13,14 +13,8 @@
 
 #ifndef LISTA_REGISTROS_H
 #define LISTA_REGISTROS_H
-#include "Registro.h"
 #include <stdlib.h>
-
-typedef struct Nodo {
-    Registro* data;
-    struct Nodo* sig;
-
-} Nodo;
+#include "Nodo.h"
 
 typedef struct ListaRegistro {
     Nodo* head;

@@ -40,6 +40,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/C_Files/Interfaz.o \
 	${OBJECTDIR}/C_Files/Jugador.o \
 	${OBJECTDIR}/C_Files/Lista_Registros.o \
+	${OBJECTDIR}/C_Files/Nodo.o \
 	${OBJECTDIR}/C_Files/Registro.o \
 	${OBJECTDIR}/C_Files/Table.o \
 	${OBJECTDIR}/C_Files/main.o
@@ -93,6 +94,11 @@ ${OBJECTDIR}/C_Files/Lista_Registros.o: C_Files/Lista_Registros.c
 	${MKDIR} -p ${OBJECTDIR}/C_Files
 	${RM} "$@.d"
 	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/C_Files/Lista_Registros.o C_Files/Lista_Registros.c
+
+${OBJECTDIR}/C_Files/Nodo.o: C_Files/Nodo.c
+	${MKDIR} -p ${OBJECTDIR}/C_Files
+	${RM} "$@.d"
+	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/C_Files/Nodo.o C_Files/Nodo.c
 
 ${OBJECTDIR}/C_Files/Registro.o: C_Files/Registro.c
 	${MKDIR} -p ${OBJECTDIR}/C_Files

@@ -22,6 +22,18 @@
 
 extern void empezarJuego();
 extern void imprimirTablero();
+
+extern Jugador definirJugador(char nombreJugador[10]);
+extern Registro* crearRegistro(Jugador *jugador);
+
 extern void vistaMenu();
+
+/*
+Retorna 1 si gano el juego;
+Retorna -1 si se retiro del juego
+*/
+extern int menuJuego(int* numeroMovimientos);
+
+extern Move pedirMovimiento();
 
 #endif /* INTERFAZ_H */
