@@ -20,6 +20,7 @@
 #include "Table.h"
 #include "Jugador.h"
 #include "DateGenerator.h"
+#include "Archivos.h"
 
 extern void empezarJuego();
 extern void imprimirTablero();

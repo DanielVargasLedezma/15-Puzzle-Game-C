@@ -1,0 +1,4 @@
+El jugador necesito 0 movimientos
+El nombre del jugador es Daniel
+Se jugo el dia 7 del mes 9 del 2021
+El jugador PERDIO

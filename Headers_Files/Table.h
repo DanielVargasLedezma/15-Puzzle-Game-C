@@ -34,7 +34,7 @@ typedef struct Table
 
 } Table;
 
-extern Table *table;
+extern Table table;
 
 extern void inicializarTablero(int n, int m);
 extern void randomizarNumeros();

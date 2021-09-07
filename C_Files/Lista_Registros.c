@@ -20,6 +20,7 @@ void initList()
     if (!lista)
     {
         lista = (ListaRegistro *)malloc(sizeof(ListaRegistro));
+        lista->head = NULL;
         lista->cantidadNodos = 0;
     }
 }
@@ -35,7 +36,7 @@ void push(Registro *data)
     nuevo->data = data;
     nuevo->sig = NULL;
 
-    if (!lista->head)
+    if (!(lista->head))
     {
         lista->head = nuevo;
     }

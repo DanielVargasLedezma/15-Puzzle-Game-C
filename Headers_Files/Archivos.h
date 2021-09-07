@@ -17,7 +17,16 @@
 #include <stdio.h>
 #include "Lista_Registros.h"
 
-void cargarLista(ListaRegistro* lista);
-void guardarLista(ListaRegistro* lista);
+/*
+Retorna -1 si el archivo esta vacio o si hubo un error al abrir el archivo;
+Retorna 1 si la carga se realizo con exito
+*/
+extern int cargarLista();
+
+extern void cargarNodo(Registro *data, FILE *reservaciones);
+
+extern void guardarLista(ListaRegistro* lista);
+
+extern void escribirNodo(Registro *data, FILE *reservaciones);
 
 #endif /* ARCHIVO_H */

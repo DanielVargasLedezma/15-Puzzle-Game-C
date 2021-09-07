@@ -18,18 +18,17 @@ void empezarJuego()
     inicializarTablero(4, 4);
     initList();
 
-    //Cargar registros a la lista
-    /*
-    cargarLista(lista);
-    
-    */
-    imprimirTablero();
+    //Cargar registros a la list
+    // if (cargarLista() == -1)
+    // {
+    //     initList();
+    // }
+
     vistaMenu();
 
     //Guardar registros de la lista
-    /*
+
     guardarLista(lista);
-    */
 
     freeList();
     liberarMemoriaTablero();
@@ -37,13 +36,13 @@ void empezarJuego()
 
 void imprimirTablero()
 {
-    for (int i = 0; i < table->row_count; i++)
+    for (int i = 0; i < table.row_count; i++)
     {
-        for (int j = 0; j < table->col_count; j++)
+        for (int j = 0; j < table.col_count; j++)
         {
-            if (table->tablero[i][j] != 0)
+            if (table.tablero[i][j] != 0)
             {
-                printf(j != table->col_count - 1 ? " [%2d] " : " [%2d] \n", table->tablero[i][j]);
+                printf(j != table.col_count - 1 ? " [%2d] " : " [%2d] \n", table.tablero[i][j]);
             }
             else
             {
@@ -99,11 +98,16 @@ void vistaMenu()
 
     if (menuJuego(&numeroMovimientos) == 1)
     {
+        char ganar[10] = {'G','A','N','O','\0'};
         printf("Usted gano el juego");
+        memcpy(nuevoRegistro->resultado, ganar, sizeof ganar);
+
     }
     else
     {
+        char perder[10] = {'P','E','R','D', 'I','O','\0'};
         printf("Usted decidio retirarse, que pena...");
+        memcpy(nuevoRegistro->resultado, perder, sizeof perder);
     }
 
     //Cuando se finaliza el juego o cuando el jugador se retira
@@ -120,7 +124,7 @@ int menuJuego(int *numeroMovimientos)
     int response = 0;
     Move move;
 
-    probarGanexd();
+    // probarGanexd();
     imprimirTablero();
 
     do

@@ -17,7 +17,7 @@
 typedef struct Registro {
     int numeroMovimientos;
     char nombreJugador[10];
-
+    char resultado[10];
     //[0] day - [1] month - [2] year
     int fecha_jugada[3];
 
