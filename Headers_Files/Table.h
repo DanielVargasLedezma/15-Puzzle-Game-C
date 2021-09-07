@@ -69,7 +69,7 @@ Retorna -1 si el tablero no esta ordenado.
 extern int checkIfWon();
 
 extern void doTheMove(Move move);
-
+extern void probarGanexd();
 extern void liberarMemoriaTablero();
 
 #endif /* TABLE_H */
